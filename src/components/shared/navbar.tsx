@@ -22,10 +22,20 @@ export function Navbar() {
           <ArtisticClubLogo />
           <NavItems items={siteConfig.navItems} />
           <div className="flex items-center">
-            <NavbarButton variant="secondary" className="font-light">
+            <NavbarButton
+              as="a"
+              href={siteConfig.links.login}
+              variant="secondary"
+              className="font-light"
+            >
               Login
             </NavbarButton>
-            <NavbarButton variant="primary" className="font-light">
+            <NavbarButton
+              as="a"
+              href={siteConfig.links.contact}
+              variant="primary"
+              className="font-light"
+            >
               Book a call
             </NavbarButton>
             <ThemeSwitch />
@@ -63,6 +73,8 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
+                as="a"
+                href={siteConfig.links.login}
               >
                 Login
               </NavbarButton>
@@ -70,6 +82,8 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
+                as="a"
+                href={siteConfig.links.contact}
               >
                 Book a call
               </NavbarButton>

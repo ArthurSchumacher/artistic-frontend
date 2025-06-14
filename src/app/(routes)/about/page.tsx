@@ -10,7 +10,7 @@ import {
   CardSkeletonContainer,
   CardTitle,
   Skeleton,
-} from "@/components/ui/cards/block-animated-car/block-animated-card";
+} from "@/components/ui/cards/block-animated-card/block-animated-card";
 import { BackgroundLines } from "@/components/ui/backgrounds/background-lines";
 import { words } from "@/data/words";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effects/typewriter-effect-smooth";
