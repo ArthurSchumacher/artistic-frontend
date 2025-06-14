@@ -1,6 +1,5 @@
 import { LoginForm } from "@/components/pages/login/login-form";
 import { title } from "@/components/primitives";
-import { fontMono } from "@/config/fonts";
 import { cn } from "@/lib/utils";
 
 export default async function LoginPage() {

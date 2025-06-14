@@ -1,3 +1,10 @@
+import {
+  IconArrowLeft,
+  IconBrandTabler,
+  IconSettings,
+  IconUserBolt,
+} from "@tabler/icons-react";
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
@@ -15,6 +22,29 @@ export const siteConfig = {
     {
       label: "About",
       href: "/about",
+    },
+  ],
+  dashboardItems: [
+    {
+      label: "Dashboard",
+      href: "/dashboard",
+      icon: (
+        <IconBrandTabler className="h-5 w-5 shrink-0 text-stone-700 dark:text-stone-200" />
+      ),
+    },
+    {
+      label: "Profile",
+      href: "/profile",
+      icon: (
+        <IconUserBolt className="h-5 w-5 shrink-0 text-stone-700 dark:text-stone-200" />
+      ),
+    },
+    {
+      label: "Settings",
+      href: "/settings",
+      icon: (
+        <IconSettings className="h-5 w-5 shrink-0 text-stone-700 dark:text-stone-200" />
+      ),
     },
   ],
   links: {
