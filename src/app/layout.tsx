@@ -6,6 +6,7 @@ import { Navbar } from "@/components/shared/navbar";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import { Footer } from "@/components/shared/footer";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: {
@@ -34,10 +35,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en-us">
       <head />
       <body
-        className={cn(
-          "min-h-screen font-sans antialiased",
-          fontSans.variable
-        )}
+        className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
       >
         <ThemeProvider
           attribute="class"
@@ -51,6 +49,17 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+
+        <Toaster
+          toastOptions={{
+            position: "bottom-left",
+            duration: 5000,
+            style: {
+              background: "#fafaf9",
+              color: "#1C1917",
+            },
+          }}
+        />
       </body>
     </html>
   );

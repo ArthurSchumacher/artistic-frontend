@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 
 export default function PricingPage() {
   return (
-    <div>
+    <>
       <BackgroundBoxed color="bg-gradient-to-b from-stone-700 to-stone-900 dark:from-stone-800 dark:to-stone-950">
         <h1
           className={cn(
@@ -39,7 +39,7 @@ export default function PricingPage() {
         </p>
       </BackgroundBoxed>
 
-      <TracingBeam className="px-4 py-12 my-5 lg:my-20">
+      <TracingBeam className="px-4 py-12 my-16 sm:my-32">
         <div className="relative z-10 max-w-6xl mx-auto">
           <FocusCards cards={cards} />
         </div>
@@ -57,7 +57,9 @@ export default function PricingPage() {
         ))}
       </div>
 
-      <CallToAction />
+      <div className="my-16 sm:my-32">
+        <CallToAction />
+      </div>
 
       <AnimatedTestimonials testimonials={ownersTestimonials} />
 
@@ -66,6 +68,6 @@ export default function PricingPage() {
         direction="right"
         speed="slow"
       />
-    </div>
+    </>
   );
 }

@@ -25,7 +25,7 @@ export default function Home() {
       <HeroParallax products={products} />
 
       <div className="p-8 sm:p-16">
-        <div className="relative z-20 max-w-7xl mx-auto my-10 lg:my-40">
+        <div className="relative z-20 max-w-7xl mx-auto my-16 sm:my-32">
           <div className="px-8 text-center">
             <h4
               className={cn(
@@ -67,7 +67,7 @@ export default function Home() {
 
         <CallToAction />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-2 max-w-7xl mx-auto my-10 lg:my-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-2 max-w-7xl mx-auto my-16 sm:my-32">
           {securityFeatures.map((feature) => (
             <div
               key={feature.id}
@@ -84,7 +84,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+        <div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start justify-center mx-auto gap-16">
           <div className="flex flex-col items-start">
             <p
               className={cn(
@@ -101,6 +101,7 @@ export default function Home() {
               <AnimatedTooltip items={users} />
             </div>
           </div>
+
           <div className="flex flex-col sm:flex-row flex-wrap sm:flex-nowrap">
             <TechText icon={NextJSIcon} title="next.js" />
             <TechText icon={ReactJSIcon} title="react" />
@@ -110,7 +111,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="my-10 lg:my-40">
+        <div className="my-16 sm:my-32">
           <InfiniteMovingCards
             items={clientTestimonials}
             direction="right"

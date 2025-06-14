@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Card as TCard } from "@/types/card/get-card";
 import Image from "next/image";
+import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 export const Card = React.memo(
   ({
@@ -51,7 +53,7 @@ export function FocusCards({ cards }: { cards: TCard[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto md:px-8 w-full">
+    <Link href={siteConfig.links.contact} className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto md:px-8 w-full">
       {cards.map((card, index) => (
         <Card
           key={card.id}
@@ -61,6 +63,6 @@ export function FocusCards({ cards }: { cards: TCard[] }) {
           setHovered={setHovered}
         />
       ))}
-    </div>
+    </Link>
   );
 }
