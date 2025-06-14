@@ -10,7 +10,7 @@ export const BackgroundBoxed = ({ color, children }: BackgroundBoxedProps) => {
   return (
     <div
       className={cn(
-        "h-96 relative w-full overflow-hidden flex flex-col items-center justify-center rounded-lg",
+        "h-96 relative w-full mx-auto overflow-hidden flex flex-col items-center justify-center rounded-lg",
         color,
       )}
     >

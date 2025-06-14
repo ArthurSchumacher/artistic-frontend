@@ -1,7 +1,7 @@
 "use client";
 import { siteConfig } from "@/config/site";
 import { useState } from "react";
-import { ArtisticClubLogo } from "../logo/logo";
+import { ArtisticClubLogo } from "./logo";
 import { ThemeSwitch } from "./theme-switch";
 import { Navbar as UINavbar } from "@/components/ui/navbar/navbar";
 import { NavBody } from "@/components/ui/navbar/navbar-body";

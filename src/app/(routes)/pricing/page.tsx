@@ -1,6 +1,6 @@
 import { AnimatedTestimonials } from "@/components/pages/pricing/animated-testimonials-cliented";
 import { paragraph, title } from "@/components/primitives";
-import { CallToAction } from "@/components/shared/call-to-action/call-to-action";
+import { CallToAction } from "@/components/shared/call-to-action";
 import { BackgroundBoxed } from "@/components/ui/backgrounds/background-boxed";
 import { Feature } from "@/components/ui/cards/features/feature";
 import { FocusCards } from "@/components/ui/cards/focus-card";
@@ -39,8 +39,10 @@ export default function PricingPage() {
         </p>
       </BackgroundBoxed>
 
-      <TracingBeam className="flex gap-8 sm:gap-4 flex-wrap my-5 lg:my-20">
-        <FocusCards cards={cards} />
+      <TracingBeam className="px-4 py-12 my-5 lg:my-20">
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <FocusCards cards={cards} />
+        </div>
       </TracingBeam>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 max-w-7xl mx-auto">

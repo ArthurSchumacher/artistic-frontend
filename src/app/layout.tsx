@@ -1,12 +1,11 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Navbar } from "@/components/shared/navbar/navbar";
-import { Footer } from "@/components/shared/footer/footer";
+import { Navbar } from "@/components/shared/navbar";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider/theme-provider";
+import { ThemeProvider } from "@/components/shared/theme-provider";
+import { Footer } from "@/components/shared/footer";
 
 export const metadata: Metadata = {
   title: {
