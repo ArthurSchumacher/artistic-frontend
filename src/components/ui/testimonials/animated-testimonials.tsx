@@ -4,8 +4,6 @@ import { OwnerTestimonial } from "@/types/owner-testimonial/get-owner-testimonia
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
-import { Button } from "../button/button";
-import { NavbarButton } from "../navbar/navbar-button";
 
 export const AnimatedTestimonials = ({
   testimonials,
@@ -47,7 +45,7 @@ export const AnimatedTestimonials = ({
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
-                  key={testimonial.src}
+                  key={testimonial.id}
                   initial={{
                     opacity: 0,
                     scale: 0.9,

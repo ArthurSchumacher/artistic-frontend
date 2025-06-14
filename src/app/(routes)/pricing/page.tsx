@@ -1,9 +1,9 @@
+import { AnimatedTestimonials } from "@/components/pages/pricing/animated-testimonials-cliented";
 import { paragraph, title } from "@/components/primitives";
 import { CallToAction } from "@/components/shared/call-to-action/call-to-action";
 import { BackgroundBoxed } from "@/components/ui/backgrounds/background-boxed";
 import { Feature } from "@/components/ui/cards/features/feature";
 import { FocusCards } from "@/components/ui/cards/focus-card";
-import { AnimatedTestimonials } from "@/components/ui/testimonials/animated-testimonials";
 import { InfiniteMovingCards } from "@/components/ui/testimonials/infinite-moving-cards";
 import { TracingBeam } from "@/components/ui/tracing-beam/tracing-beam";
 import { cards } from "@/data/cards";
