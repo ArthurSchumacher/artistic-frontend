@@ -109,3 +109,47 @@ export const title = tv({
     },
   ],
 });
+
+export const subtitle = tv({
+  base: "tracking-tight leading-relaxed uppercase font-light inline",
+  variants: {
+    color: {
+      violet: "from-[#FF1CF7] to-[#b249f8]",
+      yellow: "from-[#FF705B] to-[#FFB457]",
+      blue: "from-[#5EA2EF] to-[#0072F5]",
+      cyan: "from-[#00b7fa] to-[#01cfea]",
+      green: "from-[#6FEE8D] to-[#17c964]",
+      pink: "from-[#FF72E1] to-[#F54C7A]",
+      foreground: "dark:from-white dark:to-stone-400",
+      black: "from-black to-stone-900 dark:from-stone-200 dark:to-white",
+      white: "from-stone-200 to-white",
+    },
+    size: {
+      sm: "text-xs lg:text-sm",
+      md: "text-sm md:text-base",
+      lg: "text-lg lg:text-xl",
+    },
+    fullWidth: {
+      true: "w-full block",
+    },
+  },
+  defaultVariants: {
+    size: "sm",
+  },
+  compoundVariants: [
+    {
+      color: [
+        "violet",
+        "yellow",
+        "blue",
+        "cyan",
+        "green",
+        "pink",
+        "foreground",
+        "black",
+        "white",
+      ],
+      class: "bg-clip-text text-transparent bg-gradient-to-b",
+    },
+  ],
+});

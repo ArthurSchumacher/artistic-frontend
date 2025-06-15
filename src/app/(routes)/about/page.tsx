@@ -48,7 +48,7 @@ export default function AboutPage() {
           </div>
         </BackgroundLines>
         <div className="flex gap-8 sm:gap-4 flex-wrap">
-          <div className="flex-grow sm:flex-1">
+          <div className="flex-grow sm:flex-1 self-center">
             <p className={cn(paragraph({ size: "sm" }))}>
               At Artistic Club, we are a premier software house specializing in
               delivering bespoke digital solutions to global enterprises,

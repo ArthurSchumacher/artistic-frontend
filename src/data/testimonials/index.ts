@@ -1,7 +1,6 @@
-import { ClientTestimonial } from "@/types/client-testimonial/get-client-testimonial";
-import { OwnerTestimonial } from "@/types/owner-testimonial/get-owner-testimonial";
+import { Testimonial } from "@/types/testimonial/get-testimonial";
 
-export const clientTestimonials: ClientTestimonial[] = [
+export const clientTestimonials: Testimonial[] = [
     {
         id: 1,
         quote:
@@ -38,7 +37,7 @@ export const clientTestimonials: ClientTestimonial[] = [
     },
 ];
 
-export const ownersTestimonials: OwnerTestimonial[] = [
+export const ownersTestimonials: Testimonial[] = [
     {
         id: 1,
         quote:

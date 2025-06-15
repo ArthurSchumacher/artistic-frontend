@@ -1,11 +1,11 @@
 "use client";
 
 import { SkeletonTestimonials } from "@/components/ui/skeleton/skeleton-testimonials";
-import { OwnerTestimonial } from "@/types/owner-testimonial/get-owner-testimonial";
+import { Testimonial } from "@/types/testimonial/get-testimonial";
 import dynamic from "next/dynamic";
 
 interface AnimatedTestimonialsProps {
-  testimonials: OwnerTestimonial[];
+  testimonials: Testimonial[];
   autoplay?: boolean;
 };
 

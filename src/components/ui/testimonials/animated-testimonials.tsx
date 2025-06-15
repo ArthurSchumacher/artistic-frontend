@@ -1,6 +1,6 @@
 "use client";
 
-import { OwnerTestimonial } from "@/types/owner-testimonial/get-owner-testimonial";
+import { Testimonial } from "@/types/testimonial/get-testimonial";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
@@ -9,7 +9,7 @@ export const AnimatedTestimonials = ({
   testimonials,
   autoplay = false,
 }: {
-  testimonials: OwnerTestimonial[];
+  testimonials: Testimonial[];
   autoplay?: boolean;
 }) => {
   const [active, setActive] = useState(0);

@@ -9,11 +9,9 @@ import {
   IconRouteAltLeft,
   IconTerminal2,
 } from "@tabler/icons-react";
-import { HomeFeature } from "@/types/feature/get-home-feature";
 import { SkeletonFour } from "@/components/ui/skeleton/skeleton-four";
 import { SkeletonOne } from "@/components/ui/skeleton/skeleton-one";
 import { SkeletonTwo } from "@/components/ui/skeleton/skeleton-two";
-import { SecurityFeature } from "@/types/feature/get-security-feature";
 
 export const features: Feature[] = [
   {
@@ -70,7 +68,7 @@ export const features: Feature[] = [
   },
 ];
 
-export const homeFeatures: HomeFeature[] = [
+export const homeFeatures: Feature[] = [
   {
     id: 1,
     label: "Track clients effectively",
@@ -107,7 +105,7 @@ export const homeFeatures: HomeFeature[] = [
   },
 ];
 
-export const securityFeatures: SecurityFeature[] = [
+export const securityFeatures: Feature[] = [
   {
     id: 1,
     label: "HIPAA, SOC2 and LGPD Compliant",

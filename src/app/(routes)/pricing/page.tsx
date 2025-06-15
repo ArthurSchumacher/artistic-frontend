@@ -51,7 +51,7 @@ export default function PricingPage() {
             key={index}
             title={feature.label}
             description={feature.description}
-            icon={feature.icon}
+            icon={feature.icon!}
             index={index}
           />
         ))}
