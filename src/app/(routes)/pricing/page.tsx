@@ -31,7 +31,7 @@ export default function PricingPage() {
           className={cn(
             paragraph({
               color: "white",
-              class: "relative z-20",
+              class: "relative z-20 px-4",
             })
           )}
         >
