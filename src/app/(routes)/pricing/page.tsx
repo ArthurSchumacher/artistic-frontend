@@ -63,11 +63,13 @@ export default function PricingPage() {
 
       <AnimatedTestimonials testimonials={ownersTestimonials} />
 
-      <InfiniteMovingCards
-        items={clientTestimonials}
-        direction="right"
-        speed="slow"
-      />
+      <div className="my-16 sm:my-32">
+        <InfiniteMovingCards
+          items={clientTestimonials}
+          direction="right"
+          speed="slow"
+        />
+      </div>
     </>
   );
 }
