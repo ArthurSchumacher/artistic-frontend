@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export default async function ContactPage() {
   return (
-    <div className="flex flex-col sm:flex-row">
+    <>
       <div>
         <h1
           className={cn(
@@ -22,9 +22,9 @@ export default async function ContactPage() {
         </p>
       </div>
 
-      <div className="shadow-input w-full min-w-sm max-w-7xl rounded-md md:rounded-2xl mx-auto p-8 border bg-stone-50 dark:bg-stone-800 border-stone-200 dark:border-stone-700">
+      <div className="shadow-input w-full min-w-xs max-w-7xl rounded-md md:rounded-2xl mx-auto p-8 border bg-stone-50 dark:bg-stone-800 border-stone-200 dark:border-stone-700">
         <ContactForm />
       </div>
-    </div>
+    </>
   );
 }
