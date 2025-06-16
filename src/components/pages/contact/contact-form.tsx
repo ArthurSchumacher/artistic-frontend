@@ -59,7 +59,7 @@ export const ContactForm = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
+        <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-2">
           <div className="flex-1">
             <FormField
               control={form.control}
