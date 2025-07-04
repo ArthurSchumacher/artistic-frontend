@@ -12,7 +12,7 @@ import {
   Skeleton,
 } from "@/components/ui/cards/block-animated-card/block-animated-card";
 import { BackgroundLines } from "@/components/ui/backgrounds/background-lines";
-import { words } from "@/data/words";
+import { mobileWords, words } from "@/data/words";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effects/typewriter-effect-smooth";
 
 export default function AboutPage() {
@@ -44,7 +44,8 @@ export default function AboutPage() {
             >
               Cutting-edge software solutions with
             </span>
-            <TypewriterEffectSmooth words={words} />
+            <TypewriterEffectSmooth className="hidden sm:flex" words={words} />
+            <TypewriterEffectSmooth className="flex sm:hidden" words={mobileWords} />
           </div>
         </BackgroundLines>
         <div className="flex gap-8 sm:gap-4 flex-wrap">

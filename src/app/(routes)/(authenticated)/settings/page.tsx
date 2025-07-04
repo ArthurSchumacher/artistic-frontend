@@ -45,19 +45,14 @@ export default async function SettingsPage() {
   const testimonials_count: number = testimonials.length;
   const features_count: number = minimalFeatures.length;
 
-  const roles = [
-    "Admin",
-    "User"
-  ]
-
   return (
     <>
       <div className="flex flex-col lg:flex-row gap-2">
         <EntityButton
           entity_label="users"
           entity_counter={users_count}
-          handleCreate={<UserCreateForm roles={roles} />}
-          handleUpdate={<UserUpdateForm roles={roles} />}
+          handleCreate={<UserCreateForm />}
+          handleUpdate={<UserUpdateForm />}
           handleDelete={<UserDeleteForm />}
         />
         <EntityButton

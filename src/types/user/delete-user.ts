@@ -1,3 +1,3 @@
 export type DeleteUser = {
-    id: string;
+    uuid: string;
 }

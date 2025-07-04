@@ -1,5 +1,5 @@
 export type Testimonial = {
-    id: number;
+    uuid: string;
     quote: string;
     name: string;
     title?: string;

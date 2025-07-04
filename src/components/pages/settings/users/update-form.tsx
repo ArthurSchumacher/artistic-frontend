@@ -53,12 +53,8 @@ const formSchema = z
     path: ["c_password"],
   });
 
-interface UserUpdateFormProps {
-  roles: string[];
-}
-
-export const UserUpdateForm = ({ roles }: UserUpdateFormProps) => {
-  const [user, setUser] = useState<User>();
+export const UserUpdateForm = () => {
+  const [user, setUser] = useState<User | undefined>(undefined);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -86,14 +82,6 @@ export const UserUpdateForm = ({ roles }: UserUpdateFormProps) => {
       });
     }
   }, [user, form]);
-
-  const renderedRoles = roles.map((role, index) => {
-    return (
-      <SelectItem key={index} value={role}>
-        {role}
-      </SelectItem>
-    );
-  });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
@@ -163,13 +151,19 @@ export const UserUpdateForm = ({ roles }: UserUpdateFormProps) => {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Role</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <Select onValueChange={field.onChange} value={user.role}>
                 <FormControl>
-                  <SelectTrigger className="w-full py-5 bg-stone-100 text-stone-950 placeholder:text-stone-400 focus-visible:ring-stone-400 dark:bg-stone-900 dark:text-stone-50 dark:placeholder-text-stone-600 dark:shadow-[0px_0px_1px_1px_#404040] dark:focus-visible:ring-stone-600">
+                  <SelectTrigger className="w-full py-5 bg-stone-100 text-stone-950 placeholder:text-stone-400 focus-visible:ring-stone-400 dark:bg-stone-900 dark:text-stone-50 dark:placeholder-text-stone-600 dark:shadow-[0px_0px_1px_1px_#404040] dark:focus-visible:ring-stone-600 capitalize">
                     <SelectValue placeholder="Select a role" />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent>{renderedRoles}</SelectContent>
+                <SelectContent>
+                  {['admin', 'user'].map((role, index) => (
+                    <SelectItem className="capitalize" key={index} value={role}>
+                      {role}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
               </Select>
               <FormMessage />
             </FormItem>

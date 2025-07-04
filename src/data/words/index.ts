@@ -2,23 +2,38 @@ import { Word } from "@/types/word/get-word";
 
 export const words: Word[] = [
     {
-        id: 1,
+        uuid: "1",
         text: "precision,",
     },
     {
-        id: 2,
+        uuid: "2",
         text: "innovation,",
     },
     {
-        id: 3,
+        uuid: "3",
         text: "and",
     },
     {
-        id: 4,
+        uuid: "4",
         text: "unwavering "
     },
     {
-        id: 5,
+        uuid: "5",
         text: "professionalism."
     }
 ];
+
+export const mobileWords: Word[] = [
+    {
+        uuid: "6",
+        text: "precision"
+    },
+    {
+        uuid: "7",
+        text: "and",
+    },
+    {
+        uuid: "8",
+        text: "innovation.",
+    },
+]

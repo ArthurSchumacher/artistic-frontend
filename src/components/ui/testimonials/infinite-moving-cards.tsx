@@ -89,7 +89,7 @@ export const InfiniteMovingCards = ({
               "border border-b-0 border-stone-200 dark:border-stone-800",
               "bg-gradient-to-b from-stone-50 to-stone-200 dark:from-stone-800 dark:to-stone-950"
             )}
-            key={item.name}
+            key={item.uuid}
           >
             <blockquote>
               <div

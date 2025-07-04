@@ -1,4 +1,4 @@
 export type Word = {
-    id: number;
+    uuid: string;
     text: string;
 }

@@ -78,7 +78,7 @@ export const usersColumns: ColumnDef<User>[] = [
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
               <DropdownMenuItem
                 onClick={() =>
-                  navigator.clipboard.writeText(user.id.toString())
+                  navigator.clipboard.writeText(user.uuid)
                 }
               >
                 Copy user ID
