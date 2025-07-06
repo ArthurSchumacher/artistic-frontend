@@ -1,5 +1,5 @@
 export type Product = {
-    id: number;
+    uuid: string;
     label: string;
     href: string;
     repository: string;

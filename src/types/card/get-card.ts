@@ -1,5 +1,5 @@
 export type Card = {
-  id: number;
+  uuid: string;
   label: string;
   href: string;
 };
