@@ -22,6 +22,8 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import toast from "react-hot-toast";
 
+// NEEDS TO HANDLE FILE UPLOAD.
+
 const formSchema = z
   .object({
     name: z.string().min(1, { message: "This field has to be filled." }),
@@ -131,7 +133,7 @@ export const UserCreateForm = () => {
               <FormLabel>Role</FormLabel>
               <Select onValueChange={field.onChange}>
                 <FormControl>
-                  <SelectTrigger className="w-full py-5 bg-stone-100 text-stone-950 placeholder:text-stone-400 focus-visible:ring-stone-400 dark:bg-stone-900 dark:text-stone-50 dark:placeholder-text-stone-600 dark:shadow-[0px_0px_1px_1px_#404040] dark:focus-visible:ring-stone-600">
+                  <SelectTrigger className="w-full capitalize py-5 bg-stone-100 text-stone-950 placeholder:text-stone-400 focus-visible:ring-stone-400 dark:bg-stone-900 dark:text-stone-50 dark:placeholder-text-stone-600 dark:shadow-[0px_0px_1px_1px_#404040] dark:focus-visible:ring-stone-600">
                     <SelectValue placeholder="Selecione a role" />
                   </SelectTrigger>
                 </FormControl>
