@@ -67,7 +67,7 @@ export const wordsColumns: ColumnDef<Word>[] = [
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
               <DropdownMenuItem
                 onClick={() =>
-                  navigator.clipboard.writeText(word.id.toString())
+                  navigator.clipboard.writeText(word.uuid.toString())
                 }
               >
                 Copy word ID

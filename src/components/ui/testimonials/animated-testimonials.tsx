@@ -45,7 +45,7 @@ export const AnimatedTestimonials = ({
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
-                  key={testimonial.id}
+                  key={testimonial.uuid}
                   initial={{
                     opacity: 0,
                     scale: 0.9,

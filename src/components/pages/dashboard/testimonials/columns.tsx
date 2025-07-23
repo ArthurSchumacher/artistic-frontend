@@ -79,7 +79,7 @@ export const testimonialsColumns: ColumnDef<Testimonial>[] = [
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
               <DropdownMenuItem
                 onClick={() =>
-                  navigator.clipboard.writeText(testimonial.id.toString())
+                  navigator.clipboard.writeText(testimonial.uuid.toString())
                 }
               >
                 Copy testimonial ID

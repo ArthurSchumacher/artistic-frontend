@@ -82,7 +82,7 @@ export const pricingCardsColumns: ColumnDef<Card>[] = [
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
               <DropdownMenuItem
                 onClick={() =>
-                  navigator.clipboard.writeText(pricing_card.id.toString())
+                  navigator.clipboard.writeText(pricing_card.uuid.toString())
                 }
               >
                 Copy pricing card ID

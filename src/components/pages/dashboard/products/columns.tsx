@@ -90,7 +90,7 @@ export const productColumns: ColumnDef<Product>[] = [
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
               <DropdownMenuItem
                 onClick={() =>
-                  navigator.clipboard.writeText(product.id.toString())
+                  navigator.clipboard.writeText(product.uuid.toString())
                 }
               >
                 Copy product ID

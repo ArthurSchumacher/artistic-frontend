@@ -56,7 +56,7 @@ export function FocusCards({ cards }: { cards: TCard[] }) {
     <Link href={siteConfig.links.contact} className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto md:px-8 w-full">
       {cards.map((card, index) => (
         <Card
-          key={card.id}
+          key={card.uuid}
           card={card}
           index={index}
           hovered={hovered}

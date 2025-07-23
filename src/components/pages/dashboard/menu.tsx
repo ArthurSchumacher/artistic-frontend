@@ -7,8 +7,6 @@ import {
   SidebarLink,
 } from "@/components/ui/sidebar/sidebar";
 import { siteConfig } from "@/config/site";
-import { IconArrowLeft } from "@tabler/icons-react";
-import { motion } from "motion/react";
 import { LogoutButton } from "./logout-button";
 
 interface MenuProps {

@@ -22,7 +22,7 @@ export const ProductCard = ({
         whileHover={{
           y: -20,
         }}
-        key={product.id}
+        key={product.uuid}
         className="group/product h-96 w-[30rem] relative shrink-0"
       >
         <Link
