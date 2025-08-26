@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button/button";
 import { Cover } from "@/components/ui/cover/cover";
 import {
   Form,
@@ -16,6 +15,8 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import toast from "react-hot-toast";
 import { Textarea } from "@/components/ui/form/textarea";
+import { Button } from "@/components/ui/form/button";
+import { LoaderIcon } from "lucide-react";
 
 const formSchema = z.object({
   firstName: z
@@ -112,9 +113,7 @@ export const ContactForm = () => {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>
-                Subject
-              </FormLabel>
+              <FormLabel>Subject</FormLabel>
               <FormControl>
                 <Input {...field} />
               </FormControl>
@@ -132,15 +131,23 @@ export const ContactForm = () => {
                 <Cover>Message</Cover>
               </FormLabel>
               <FormControl>
-                <Textarea placeholder="Tell us a little bit about your idea." className="resize-none" {...field} />
+                <Textarea
+                  placeholder="Tell us a little bit about your idea."
+                  className="resize-none"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
 
-        <Button type="submit" isLoading={form.formState.isSubmitting}>
-          Submit
+        <Button type="submit" className="w-full">
+          {form.formState.isSubmitting ? (
+            <LoaderIcon className="ml-2 animate-spin" size={24} />
+          ) : (
+            <>Submit</>
+          )}
         </Button>
       </form>
     </Form>

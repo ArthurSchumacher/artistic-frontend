@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button/button";
 import { Cover } from "@/components/ui/cover/cover";
 import {
   Form,
@@ -15,6 +14,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import toast from "react-hot-toast";
+import { Button } from "@/components/ui/form/button";
+import { LoaderIcon } from "lucide-react";
 
 const formSchema = z.object({
   email: z
@@ -38,7 +39,7 @@ const formSchema = z.object({
     }),
 });
 
-export const ProductUpdateForm = () => {
+export const FeatureUpdateForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -99,8 +100,12 @@ export const ProductUpdateForm = () => {
           )}
         />
 
-        <Button type="submit" isLoading={form.formState.isSubmitting}>
-          Submit
+        <Button type="submit" className="w-full">
+          {form.formState.isSubmitting ? (
+            <LoaderIcon className="ml-2 animate-spin" size={24} />
+          ) : (
+            <>Submit</>
+          )}
         </Button>
       </form>
     </Form>

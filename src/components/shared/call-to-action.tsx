@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 import { title } from "@/components/primitives";
 import { cn } from "@/lib/utils";
 import { Cover } from "@/components/ui/cover/cover";
-import { Button } from "@/components/ui/button/button";
+import { Button } from "@/components/ui/button/cta-button";
 
 export const CallToAction = async () => {
   return (

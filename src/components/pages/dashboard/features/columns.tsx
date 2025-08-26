@@ -50,16 +50,12 @@ export const featuresColumns: ColumnDef<MinimalFeature>[] = [
       );
     },
     cell: ({ row }) => {
-      return (
-        <div>
-          {truncateText(row.getValue("label"), 4)}
-        </div>
-      );
+      return <div>{truncateText(row.getValue("label"), 4)}</div>;
     },
   },
   {
     accessorKey: "description",
-    header: () => <div className="text-right">Quote</div>,
+    header: () => <div className="text-right">Description</div>,
     cell: ({ row }) => {
       return (
         <div className="text-right font-medium">

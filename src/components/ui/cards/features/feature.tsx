@@ -15,9 +15,10 @@ export const Feature = ({
   return (
     <div
       className={cn(
-        "flex flex-col lg:border-r py-10 relative group/feature border-stone-200 dark:border-stone-600",
-        (index === 0 || index === 4) && "lg:border-l border-l-stone-200 dark:border-stone-600",
-        index < 4 && "lg:border-b border-b-stone-200 dark:border-stone-600"
+        "flex flex-col lg:border-r py-10 relative group/feature border-stone-300 dark:border-stone-600",
+        (index === 0 || index === 4) &&
+          "lg:border-l border-l-stone-300 dark:border-stone-600",
+        index < 4 && "lg:border-b border-b-stone-300 dark:border-stone-600"
       )}
     >
       {index < 4 && (
@@ -30,7 +31,7 @@ export const Feature = ({
         <Icon size={32} className="text-stone-600 dark:text-stone-400" />
       </div>
       <div className="text-lg font-bold mb-2 relative z-10 px-10">
-        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-stone-300 dark:bg-stone-700 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
+        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-stone-300 dark:bg-stone-700 group-hover/feature:bg-stone-500 transition-all duration-200 origin-center" />
         <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-stone-800 dark:text-stone-100">
           {title}
         </span>

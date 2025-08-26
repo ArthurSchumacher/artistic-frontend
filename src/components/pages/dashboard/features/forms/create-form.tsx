@@ -14,16 +14,19 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import toast from "react-hot-toast";
 import { Button } from "@/components/ui/form/button";
+import { LoaderIcon } from "lucide-react";
 
 const formSchema = z.object({
-  id: z.string().min(1, { message: "This field has to be filled." }),
+  label: z.string().min(1, { message: "This field has to be filled." }),
+  description: z.string().min(1, { message: "This field has to be filled." }),
 });
 
-export const UserDeleteForm = () => {
+export const FeatureCreateForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      id: "",
+      label: "",
+      description: "",
     },
   });
 
@@ -45,12 +48,26 @@ export const UserDeleteForm = () => {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
-          name="id"
+          name="label"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>ID</FormLabel>
+              <FormLabel>Label</FormLabel>
               <FormControl>
-                <Input {...field} />
+                <Input type="text" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="description"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Description</FormLabel>
+              <FormControl>
+                <Input type="text" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -58,7 +75,11 @@ export const UserDeleteForm = () => {
         />
 
         <Button type="submit" className="w-full">
-          Submit
+          {form.formState.isSubmitting ? (
+            <LoaderIcon className="ml-2 animate-spin" size={24} />
+          ) : (
+            <>Submit</>
+          )}
         </Button>
       </form>
     </Form>

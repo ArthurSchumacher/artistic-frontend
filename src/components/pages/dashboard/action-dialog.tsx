@@ -16,7 +16,12 @@ interface ActionDialogProps {
   form: React.ReactElement;
 }
 
-export const ActionDialog = ({ icon, color, entity, form }: ActionDialogProps) => {
+export const ActionDialog = ({
+  icon,
+  color,
+  entity,
+  form,
+}: ActionDialogProps) => {
   const colorClasses = {
     info: "bg-sky-600",
     warning: "bg-yellow-600",

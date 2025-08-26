@@ -43,7 +43,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex flex-col min-h-screen bg-stone-100 dark:bg-stone-900">
+          <div className="relative flex flex-col min-h-screen bg-stone-200 dark:bg-stone-950">
             <Navbar />
             <main>{children}</main>
             <Footer />

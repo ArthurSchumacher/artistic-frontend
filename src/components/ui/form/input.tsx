@@ -9,7 +9,7 @@ export interface InputProps
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
-    const radius = 100; 
+    const radius = 100;
     const [visible, setVisible] = React.useState(false);
 
     let mouseX = useMotionValue(0);
@@ -40,15 +40,15 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           type={type}
           className={cn(
-            `shadow-input dark:placeholder-text-stone-600 flex h-10 w-full rounded-md border-none bg-stone-100 px-3 py-2 text-sm text-stone-950 transition duration-400 group-hover/input:shadow-none file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-stone-400 focus-visible:ring-[2px] focus-visible:ring-stone-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-stone-900 dark:text-stone-50 dark:shadow-[0px_0px_1px_1px_#404040] dark:focus-visible:ring-stone-600`,
-            className,
+            `shadow-input dark:placeholder-text-stone-600 flex h-10 w-full rounded-md border-none bg-stone-50 px-3 py-2 text-sm text-stone-950 transition duration-400 group-hover/input:shadow-none file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-stone-400 focus-visible:ring-[2px] focus-visible:ring-stone-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:bg-stone-800 dark:text-stone-50 dark:shadow-[0px_0px_1px_1px_#404040] dark:focus-visible:ring-stone-600`,
+            className
           )}
           ref={ref}
           {...props}
         />
       </motion.div>
     );
-  },
+  }
 );
 Input.displayName = "Input";
 

@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button/button";
 import {
   Form,
   FormControl,
@@ -15,7 +14,8 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import toast from "react-hot-toast";
 import { User } from "@/types/user/get-user";
-import { Cover } from "@/components/ui/cover/cover";
+import { LoaderIcon } from "lucide-react";
+import { Button } from "@/components/ui/form/button";
 
 const formSchema = z.object({
   name: z
@@ -72,10 +72,7 @@ export const ProfileForm = ({ user }: ProfileFormProps) => {
 
   return (
     <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="w-full space-y-8"
-      >
+      <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-8">
         <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
           <div className="flex-1">
             <FormField
@@ -144,11 +141,13 @@ export const ProfileForm = ({ user }: ProfileFormProps) => {
           </div>
         </div>
 
-        <Cover>
-          <Button type="submit" isLoading={form.formState.isSubmitting}>
-            Submit
-          </Button>
-        </Cover>
+        <Button type="submit" className="w-full">
+          {form.formState.isSubmitting ? (
+            <LoaderIcon className="ml-2 animate-spin" size={24} />
+          ) : (
+            <>Submit</>
+          )}
+        </Button>
       </form>
     </Form>
   );

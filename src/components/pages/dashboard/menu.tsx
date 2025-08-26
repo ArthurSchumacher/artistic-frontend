@@ -6,12 +6,30 @@ import {
   SidebarBody,
   SidebarLink,
 } from "@/components/ui/sidebar/sidebar";
-import { siteConfig } from "@/config/site";
 import { LogoutButton } from "./logout-button";
+import { IconUserBolt } from "@tabler/icons-react";
+import { CircleFadingPlus } from "lucide-react";
 
 interface MenuProps {
   children: React.ReactNode;
 }
+
+export const dashboardItems = [
+  {
+    label: "Profile",
+    href: "/profile",
+    icon: (
+      <IconUserBolt className="h-5 w-5 shrink-0 text-stone-700 dark:text-stone-200" />
+    ),
+  },
+  {
+    label: "Features",
+    href: "/features",
+    icon: (
+      <CircleFadingPlus className="h-5 w-5 shrink-0 text-stone-700 dark:text-stone-200" />
+    ),
+  },
+];
 
 export const Menu = ({ children }: MenuProps) => {
   const [open, setOpen] = useState(false);
@@ -26,7 +44,7 @@ export const Menu = ({ children }: MenuProps) => {
         <SidebarBody className="justify-between gap-10">
           <div className="flex flex-1 flex-col overflow-x-hidden overflow-y-auto">
             <div className="my-8 flex flex-col gap-2">
-              {siteConfig.dashboardItems.map((link, idx) => (
+              {dashboardItems.map((link, idx) => (
                 <SidebarLink key={idx} link={link} />
               ))}
             </div>
